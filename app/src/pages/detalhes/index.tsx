@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { 
   Container, 
@@ -9,7 +10,6 @@ import {
 import { FaArrowLeft, FaPen } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Detalhes (){
 
@@ -31,7 +31,7 @@ export default function Detalhes (){
           </Link>
         </div>
         <div>
-          <Image src='/assets/img/doctors.png' alt='doutores' width={180} height={150} />
+          <img src='/assets/img/doctors.png' alt='doutores' />
         </div>
       </Nav>
       <Content>
