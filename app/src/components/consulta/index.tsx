@@ -7,7 +7,7 @@ type ConsultaType = {
 
 export default function Consulta({ consulta, link }: ConsultaType) {
   return (
-    <Container href={link}>
+    <Container href={`/detalhes/${link}`}>
       <Text>
         <p>{consulta.data}</p>
         <p>{consulta.medico}</p>

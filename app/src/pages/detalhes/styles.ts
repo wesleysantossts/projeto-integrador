@@ -9,24 +9,44 @@ export const Container = styled.div`
 `
 
 export const Nav = styled.div`
-  height: 80px;
+  height: 250px;
   display: flex;
-  align-items: center;
-  padding: 0 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+
+  & div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 20%;
+    width: 100%;
+  }
+
+  & div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 80%;
+
+    img {
+      width: 50%;
+    }
+  }
 `
 
 export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
+  height: 70%;
   width: 100%;
   background-color: white;
   border-radius: 42px 42px 0 0;
   padding: 40px 0;
 `
 
-export const Form = styled.form`
+export const Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +73,7 @@ export const Input = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  height: 100px;
+  height: 80px;
   width: 100%;
   padding-bottom: 20px;
 
@@ -74,7 +94,7 @@ export const Input = styled.div`
     &:focus {
       outline: none;
     }
-    
+
     &[type='date'] {
       background-color: white;
       width: 50%;

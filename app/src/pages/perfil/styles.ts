@@ -5,11 +5,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `
 
 export const Nav = styled.div`
-  height: 10%;
+  height: 80px;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -19,11 +19,11 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
+  height: 100%;
   width: 100%;
   background-color: white;
   border-radius: 42px 42px 0 0;
-  padding: 0 0 40px 0;
+  padding: 40px 0;
 `
 
 export const Form = styled.form`

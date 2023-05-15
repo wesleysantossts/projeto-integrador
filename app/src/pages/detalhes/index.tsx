@@ -6,11 +6,11 @@ import {
   Form,
   Input 
 } from './styles';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaPen } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-export default function Adicionar (){
+export default function Detalhes (){
 
   function atualizarPerfil(e: React.FormEvent) {
     e.preventDefault();
@@ -21,12 +21,20 @@ export default function Adicionar (){
   return (
     <Container>
       <Nav>
-        <Link href={router.query?.from as string || '/'}>
-          <FaArrowLeft size={25} color={'white'} /> 
-        </Link>
+        <div>
+          <Link href={router.query?.from as string || '/'}>
+            <FaArrowLeft size={25} color={'white'} /> 
+          </Link>
+          <Link href={router.query?.from as string || '/'}>
+            <FaPen size={25} color={'white'} /> 
+          </Link>
+        </div>
+        <div>
+          <img src='/assets/img/doctors.png' alt='doutores' />
+        </div>
       </Nav>
       <Content>
-        <Form method='post' onSubmit={(e) => atualizarPerfil(e)}>
+        <Form>
           <Input>
             <label htmlFor='nome'>Médico</label>
             <input id='nome' type="text" />
@@ -43,7 +51,6 @@ export default function Adicionar (){
             <label htmlFor='celular'>Horário</label>
             <input id='celular' type="time" />
           </Input>
-          <button type='submit'>Salvar</button>
         </Form>
       </Content>
     </Container>
