@@ -26,11 +26,13 @@ export const Nav = styled.div`
   & div:last-child {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 80%;
+    width: 100%;
 
     img {
       width: 50%;
+      height: auto;
     }
   }
 `

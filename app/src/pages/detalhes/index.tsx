@@ -9,6 +9,7 @@ import {
 import { FaArrowLeft, FaPen } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Detalhes (){
 
@@ -30,7 +31,7 @@ export default function Detalhes (){
           </Link>
         </div>
         <div>
-          <img src='/assets/img/doctors.png' alt='doutores' />
+          <Image src='/assets/img/doctors.png' alt='doutores' width={180} height={150} />
         </div>
       </Nav>
       <Content>
