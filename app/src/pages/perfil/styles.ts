@@ -23,6 +23,7 @@ export const Content = styled.div`
   width: 100%;
   background-color: white;
   border-radius: 42px 42px 0 0;
+  padding: 0 0 40px 0;
 `
 
 export const Form = styled.form`
