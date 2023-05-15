@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export default function Perfil (){
 
-  function atualizarPerfil(e: React.MouseEvent) {
+  function atualizarPerfil(e: React.FormEvent) {
     e.preventDefault();
     console.log('funcionou')
   }
@@ -26,7 +26,7 @@ export default function Perfil (){
         </Link>
       </Nav>
       <Content>
-        <Form method='post' onSubmit={atualizarPerfil}>
+        <Form method='post' onSubmit={(e) => atualizarPerfil(e)}>
           <Input>
             <label htmlFor='nome'>Nome</label>
             <input id='nome' type="text" />
