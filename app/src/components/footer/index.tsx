@@ -4,9 +4,9 @@ import { FaHome, FaUser, FaPlusCircle } from 'react-icons/fa';
 
 export default function Footer() {
   const routes = [
-    { id: 1, path: '', icon: <FaHome /> },
-    { id: 2, path: '', icon: <FaPlusCircle /> },
-    { id: 3, path: '', icon: <FaUser /> },
+    { id: 1, path: '/', icon: <FaHome /> },
+    { id: 2, path: '/adicionar', icon: <FaPlusCircle /> },
+    { id: 3, path: '/perfil', icon: <FaUser /> },
   ]
 
   return (

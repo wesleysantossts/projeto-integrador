@@ -20,7 +20,7 @@ export default function Home() {
         <Content>
           <Title><h1>Essa semana</h1></Title>
           {agendamento.map(item => {
-            return <Consulta key={item.id} consulta={item} />
+            return <Consulta key={item.id} consulta={item} link={'/editar'} />
           })}
         </Content>
       </Container>

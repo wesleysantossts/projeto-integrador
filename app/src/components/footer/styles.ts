@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
+export const Container = styled.footer`
   height: 60px;
   width: 100%;
   background-color: white;

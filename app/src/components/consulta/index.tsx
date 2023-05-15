@@ -1,10 +1,13 @@
 import { Container, Text, Hour } from './styles';
 
-import { FaHome, FaUser, FaPlusCircle } from 'react-icons/fa';
+type ConsultaType = {
+  consulta: any,
+  link: any
+}
 
-export default function Consulta({ consulta }) {
+export default function Consulta({ consulta, link }: ConsultaType) {
   return (
-    <Container href={'/'}>
+    <Container href={link}>
       <Text>
         <p>{consulta.data}</p>
         <p>{consulta.medico}</p>
