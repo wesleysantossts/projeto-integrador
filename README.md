@@ -20,5 +20,7 @@ Na página de detalhes da consulta o usuário vai visualizar os dados salvos da 
 ## Alunos
 
 Wesley Santos dos Anjos
+
 Leticia Martins da Cruz
+
 Fabiana Lustosa da Cunha
