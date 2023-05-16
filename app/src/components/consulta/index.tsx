@@ -8,7 +8,7 @@ type ConsultaType = {
 }
 
 export default function Consulta({ consulta, link }: ConsultaType) {
-  const data = consulta.data.slice(0, 2) + '/' + consulta.data.slice(2, 4) + '/' + consulta.data.slice(4)
+  const data = moment(consulta.data, 'YYYY-MM-DD').format('DD/MM/YYYY');
 
   return (
     <Container href={`/detalhes/${link}`}>
@@ -18,7 +18,7 @@ export default function Consulta({ consulta, link }: ConsultaType) {
         <p>Local: {consulta.local}</p>
       </Text>
       <Hour>
-        <p>{consulta.horario.slice(0, 2) + ':' + consulta.horario.slice(2)}</p>
+        <p>{consulta.horario}</p>
       </Hour>
     </Container>
   )

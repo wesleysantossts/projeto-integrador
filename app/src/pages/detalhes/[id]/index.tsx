@@ -26,7 +26,6 @@ export default function Detalhes (){
   async function pegarConsultas() {
     const response = await api.get(`/consulta/${router.query.id}`);
 
-    console.log("🚀 ~ file: index.tsx:29 ~ pegarConsultas ~ response:", response)
     if (response && response.data) {
       const consultaFormat = [response.data.consulta]
       setConsulta(consultaFormat);

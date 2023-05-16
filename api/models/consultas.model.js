@@ -36,7 +36,7 @@ Consultas.sync();
       medico: 'Geriatra',
       data: '2023-01-01',
       local: 'Policlinica',
-      horario: '1530',
+      horario: '15:30',
     });
     console.log('Nova consulta criada com sucesso');
   }
