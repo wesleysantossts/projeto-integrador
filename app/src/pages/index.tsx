@@ -1,17 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Title, Content } from './styles'
 
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Consulta from '@/components/consulta'
 
+import api from '@/services/api'
+
 export default function Home() {
-  const [agendamento, setAgendamentos] = useState([
-    {id: 1, data: '20230514', medico: 'Geriatra', local: 'Policlinica', horario: '1520'},
-    {id: 2, data: '20230514', medico: 'Geriatra', local: 'Policlinica', horario: '1520'},
-    {id: 3, data: '20230514', medico: 'Geriatra', local: 'Policlinica', horario: '1520'},
-    {id: 4, data: '20230514', medico: 'Geriatra', local: 'Policlinica', horario: '1520'},
-  ])
+  const [agendamento, setAgendamentos] = useState();
+
+  async function pegarConsultas() {
+    const response = await api.get('/consultas');
+
+    if (response && response.data) setAgendamentos(response.data.consultas);
+  }
+
+  useEffect(() => {
+    pegarConsultas()
+  }, [])
 
   return (
     <>
@@ -19,7 +26,7 @@ export default function Home() {
         <Header />
         <Content>
           <Title><h1>Essa semana</h1></Title>
-          {agendamento.map(item => {
+          {agendamento && agendamento.map(item => {
             return <Consulta key={item.id} consulta={item} link={item.id} />
           })}
         </Content>

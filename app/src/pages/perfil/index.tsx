@@ -32,7 +32,6 @@ export default function Perfil (){
 
   async function pegarUsuario() {
     const response = await api.get('/usuario').catch(error => console.log('Erro ao consultar usuário', error))
-    console.log("🚀 ~ file: index.tsx:35 ~ pegarUsuario ~ response:", response)
     if (response) setData(response.data.usuario)
   }
   
