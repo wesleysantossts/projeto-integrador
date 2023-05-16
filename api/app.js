@@ -58,6 +58,17 @@ app.get('/consultas', async (req, res) => {
   return res.json({ success: true, consultas });
 });
 
+
+app.get('/consulta/:id', async (req, res) => {
+  const { id } = req.params;
+
+  const consulta = await Usuarios.findByPk(id);
+  
+  if (!consulta) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+
+  return res.json({ success: true, consulta });
+});
+
 app.put('/consulta/:id', async (req, res) => {
   const { id } = req.params;
   const { nome, descricao, preco } = req.body;

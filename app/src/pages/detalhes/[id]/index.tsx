@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { 
   Container, 
   Nav, 
@@ -11,14 +11,27 @@ import { FaArrowLeft, FaPen } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
+import api from '@/services/api';
+
 export default function Detalhes (){
+  const router = useRouter();
 
   function atualizarPerfil(e: React.FormEvent) {
     e.preventDefault();
     console.log('funcionou')
   }
 
-  const router = useRouter();
+  
+  async function pegarConsultas() {
+    const response = await api.get(`/consulta/`);
+
+    if (response && response.data) setAgendamentos(response.data.consultas);
+  }
+
+  useEffect(() => {
+    pegarConsultas()
+  }, [])
+
   return (
     <Container>
       <Nav>
