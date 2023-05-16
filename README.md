@@ -21,6 +21,6 @@ Na página de detalhes da consulta o usuário vai visualizar os dados salvos da 
 
 Wesley Santos dos Anjos (desenvolvimento frontend e backend)
 
-Leticia Martins da Cruz (texto contendo a história/jornada a partir da visão de produto, personas e protótipo desenvolvido)
+Leticia Martins da Cruz (texto contendo a história/jornada a partir da visão de produto)
 
-Fabiana Lustosa da Cunha (texto contendo a história/jornada a partir da visão de produto, personas e protótipo desenvolvido)
+Fabiana Lustosa da Cunha (texto contendo a história/jornada a partir da visão de produto)
