@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Container, 
   Nav, 
@@ -14,6 +14,7 @@ import Link from 'next/link';
 import api from '@/services/api';
 
 export default function Detalhes (){
+  const [consulta, setConsulta] = useState();
   const router = useRouter();
 
   function atualizarPerfil(e: React.FormEvent) {
@@ -23,9 +24,13 @@ export default function Detalhes (){
 
   
   async function pegarConsultas() {
-    const response = await api.get(`/consulta/`);
+    const response = await api.get(`/consulta/${router.query.id}`);
 
-    if (response && response.data) setAgendamentos(response.data.consultas);
+    console.log("🚀 ~ file: index.tsx:29 ~ pegarConsultas ~ response:", response)
+    if (response && response.data) {
+      const consultaFormat = [response.data.consulta]
+      setConsulta(consultaFormat);
+    }
   }
 
   useEffect(() => {
@@ -48,24 +53,28 @@ export default function Detalhes (){
         </div>
       </Nav>
       <Content>
-        <Form>
-          <Input>
-            <label htmlFor='nome'>Médico</label>
-            <input id='nome' type="text" />
-          </Input>
-          <Input>
-            <label htmlFor='data'>Dia</label>
-            <input id='data' type='date' />
-          </Input>
-          <Input>
-            <label htmlFor='local'>Local</label>
-            <input id='local' type='text' />
-          </Input>
-          <Input>
-            <label htmlFor='celular'>Horário</label>
-            <input id='celular' type="time" />
-          </Input>
-        </Form>
+        {consulta && consulta.map(item => {
+          return (
+          <Form key={item.id}>
+            <Input>
+              <label htmlFor='nome'>Médico</label>
+              <input id='nome' type="text" value={item.medico} />
+            </Input>
+            <Input>
+              <label htmlFor='data'>Dia</label>
+              <input id='data' type='date' value={item.data} />
+            </Input>
+            <Input>
+              <label htmlFor='local'>Local</label>
+              <input id='local' type='text' value={item.local} />
+            </Input>
+            <Input>
+              <label htmlFor='celular'>Horário</label>
+              <input id='celular' type="time" value={item.horario} />
+            </Input>
+          </Form>
+          )
+        })}
       </Content>
     </Container>
   )

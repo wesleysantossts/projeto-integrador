@@ -16,7 +16,7 @@ app.use(express.json(), cors());
 app.get('/usuario', async (req, res) => {
   const usuario = await Usuarios.findAll();
   
-  if (usuario.length === 0) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (usuario.length === 0) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
   return res.json({ success: true, usuario: usuario[0] });
 });
@@ -27,7 +27,7 @@ app.post('/usuario/:id', async (req, res) => {
 
   const usuario = await Usuarios.findByPk(id);
   
-  if (!usuario) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (!usuario) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
   await usuario.update({ nome, dataNascimento, celular });
 
@@ -53,7 +53,7 @@ app.post('/consulta', async (req, res) => {
 app.get('/consultas', async (req, res) => {
   const consultas = await Consultas.findAll();
   
-  if (consultas.length === 0) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (consultas.length === 0) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
   return res.json({ success: true, consultas });
 });
@@ -62,9 +62,9 @@ app.get('/consultas', async (req, res) => {
 app.get('/consulta/:id', async (req, res) => {
   const { id } = req.params;
 
-  const consulta = await Usuarios.findByPk(id);
+  const consulta = await Consultas.findByPk(id);
   
-  if (!consulta) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (!consulta) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
   return res.json({ success: true, consulta });
 });
@@ -83,7 +83,7 @@ app.put('/consulta/:id', async (req, res) => {
   
   const prod = await Consultas.findByPk(id);
   
-  if (!prod) return res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (!prod) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
   prod.update({ nome, descricao, preco });
 

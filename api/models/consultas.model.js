@@ -34,7 +34,7 @@ Consultas.sync();
   if (consultas.length === 0) {
     await Consultas.create({
       medico: 'Geriatra',
-      data: '01012024',
+      data: '2023-01-01',
       local: 'Policlinica',
       horario: '1530',
     });
