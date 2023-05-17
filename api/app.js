@@ -96,13 +96,13 @@ app.put('/consulta/:id', async (req, res) => {
 app.delete('/consulta/:id', async (req, res) => {
   const { id } = req.params;
 
-  if (!id) return res.status(400).json({ success: false, message: 'Insira um id de um produto' });
+  if (!id) return res.status(400).json({ success: false, message: 'Insira um id de uma consulta' });
 
   const prod = await Consultas.destroy({ where: { id } });
 
-  if (prod === 0) return  res.status(404).json({ success: false, message: 'Produto não encontrado' });
+  if (prod === 0) return  res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
-  return res.json({ success: true, message: 'Produto deletado com sucesso' });
+  return res.json({ success: true, message: 'Consulta deletada com sucesso' });
 });
 
 app.listen(3002, () => console.log(`Servidor rodando na porta 3002`));

@@ -22,7 +22,7 @@ export default function Adicionar (){
   const [consulta, setConsulta] = useState<ConsultaType>();
   const router = useRouter();
 
-  async function atualizarPerfil(e: React.FormEvent) {
+  async function atualizarConsulta(e: React.FormEvent) {
     e.preventDefault();
     
     const response = await api.put(`/consulta/${router.query.id}`, consulta);
@@ -31,6 +31,14 @@ export default function Adicionar (){
       setConsulta(response.data.consulta);
       router.push('/')
     }
+  }
+
+  async function excluirConsulta(e: React.FormEvent) {
+    e.preventDefault();
+
+    const response = await api.delete(`/consulta/${router.query.id}`);
+
+    if (response && response.data) router.push('/');
   }
 
   async function pegarConsultas() {
@@ -51,7 +59,7 @@ export default function Adicionar (){
         </Link>
       </Nav>
       <Content>
-        <Form method='post' onSubmit={(e) => atualizarPerfil(e)}>
+        <Form method='post' onSubmit={(e) => atualizarConsulta(e)}>
           <Input>
             <label htmlFor='medico'>Médico</label>
             <input id='medico' type="text" value={consulta && consulta.medico} onChange={(e) => {
@@ -77,6 +85,7 @@ export default function Adicionar (){
             }} />
           </Input>
           <button type='submit'>Salvar</button>
+          <button type='button' onClick={excluirConsulta}>Excluir</button>
         </Form>
       </Content>
     </Container>

@@ -45,6 +45,10 @@ export const Form = styled.form`
     text-transform: uppercase;
     font-size: 20px;
   }
+
+  & button:last-child {
+    background-color: red;
+  }
 `
   
 export const Input = styled.div`
