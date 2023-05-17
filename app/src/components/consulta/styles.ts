@@ -21,6 +21,11 @@ export const Text = styled.div`
     color: #242F51;
     font-weight: bold;
   }
+
+  & p:first-child {
+    color: #aaa;
+    font-size: .9rem;
+  }
 `
 
 export const Hour = styled.div`
