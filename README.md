@@ -26,6 +26,15 @@ Já na página de criação/ edição do lembrete o usuário deverá preencher c
 
 Na página de detalhes da consulta o usuário vai visualizar os dados salvos da consulta, podendo mudar os dados se necessário.
 
+## Tecnologias utilizadas
+
+[x] Typescript
+[x] Javascript
+[x] Nextjs
+[x] Nodejs
+[x] MySQL
+[x] Sequelize
+
 ## Alunos
 
 Wesley Santos dos Anjos (desenvolvimento frontend/backend e gravação do vídeo)
