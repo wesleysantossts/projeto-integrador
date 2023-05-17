@@ -28,7 +28,7 @@ Na página de detalhes da consulta o usuário vai visualizar os dados salvos da 
 
 ## Alunos
 
-Wesley Santos dos Anjos (desenvolvimento frontend e backend)
+Wesley Santos dos Anjos (desenvolvimento frontend/backend e gravação do vídeo)
 
 Leticia Martins da Cruz (texto contendo a história/jornada a partir da visão de produto)
 
