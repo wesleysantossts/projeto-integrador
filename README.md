@@ -1,4 +1,4 @@
-# Agendamento de consultas
+# Lembrete de consultas
 
 Link do vídeo: https://youtu.be/lQ2PvWk3E24
 
