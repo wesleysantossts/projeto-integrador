@@ -63,25 +63,25 @@ export default function Adicionar (){
           <Input>
             <label htmlFor='medico'>Médico</label>
             <input id='medico' type="text" value={consulta && consulta.medico} onChange={(e) => {
-              setConsulta((item) => ({ ...item, medico: e.target.value }))
+              setConsulta((item: any) => ({ ...item, medico: e.target.value }))
             }} />
           </Input>
           <Input>
             <label htmlFor='data'>Dia</label>
             <input id='data' type='date' value={consulta && consulta.data} onChange={(e) => {
-              setConsulta((item) => ({ ...item, data: e.target.value }))
+              setConsulta((item: any) => ({ ...item, data: e.target.value }))
             }} />
           </Input>
           <Input>
             <label htmlFor='local'>Local</label>
             <input id='local' type='text' value={consulta && consulta.local} onChange={(e) => {
-              setConsulta((item) => ({ ...item, local: e.target.value }))
+              setConsulta((item: any) => ({ ...item, local: e.target.value }))
             }} />
           </Input>
           <Input>
             <label htmlFor='horario'>Horário</label>
             <input id='horario' type="time" value={consulta && consulta.horario} onChange={(e) => {
-              setConsulta((item) => ({ ...item, horario: e.target.value }))
+              setConsulta((item: any) => ({ ...item, horario: e.target.value }))
             }} />
           </Input>
           <button type='submit'>Salvar</button>

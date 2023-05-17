@@ -35,19 +35,20 @@ app.post('/usuario/:id', async (req, res) => {
 });
 
 app.post('/consulta', async (req, res) => {
-  const { nome, descricao, preco } = req.body;
+  const { medico, data, horario, local } = req.body;
 
   if (
-    !nome ||
-    !descricao ||
-    !preco
-  ) return res.status(400).json({ success: false, message: 'Insira todas as informações' });
+    !medico ||
+    !data ||
+    !horario ||
+    !local
+  ) return res.status(400).json({ success: false, message: 'Insira todas as informações da consulta' });
 
-  const prod = await Consultas.create({ nome, descricao, preco });
+  const consulta = await Consultas.create({ medico, data, horario, local });
 
-  if (!prod) return res.status(400).json({ success: false, message: 'Erro ao criar o produto' });
+  if (!consulta) return res.status(400).json({ success: false, message: 'Erro ao criar a consulta' });
 
-  return res.json({ success: true, produto: prod });
+  return res.json({ success: true, consulta });
 });
 
 app.get('/consultas', async (req, res) => {
@@ -73,7 +74,7 @@ app.put('/consulta/:id', async (req, res) => {
   const { id } = req.params;
   const { medico, data, local, horario } = req.body;
 
-  if (!id) return res.status(400).json({ success: false, message: 'Insira um id de um produto' });
+  if (!id) return res.status(400).json({ success: false, message: 'Insira um id de uma consulta' });
 
   if (
     !medico && 
