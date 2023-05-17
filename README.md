@@ -28,12 +28,12 @@ Na página de detalhes da consulta o usuário vai visualizar os dados salvos da 
 
 ## Tecnologias utilizadas
 
-[x] Typescript
-[x] Javascript
-[x] Nextjs
-[x] Nodejs
-[x] MySQL
-[x] Sequelize
+- [x] Typescript
+- [x] Javascript
+- [x] Nextjs
+- [x] Nodejs
+- [x] MySQL
+- [x] Sequelize
 
 ## Alunos
 
