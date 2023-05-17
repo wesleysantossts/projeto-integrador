@@ -3,7 +3,7 @@
 Link do vídeo: https://youtu.be/lQ2PvWk3E24 
 
 <div width="80%">
-  <video src="/assets/videos/lembrou.mp4" controls>
+  <video src="./app/public/assets/videos/lembrou.mp4" controls>
     Seu navegador não suporta a tag de vídeo.
   </video>
 </div>
