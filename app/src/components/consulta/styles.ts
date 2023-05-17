@@ -23,4 +23,7 @@ export const Text = styled.div`
   }
 `
 
-export const Hour = styled.div``
+export const Hour = styled.div`
+  font-weight: bold;
+  font-size: 2rem
+`

@@ -9,46 +9,24 @@ export const Container = styled.div`
 `
 
 export const Nav = styled.div`
-  height: 250px;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-
-  & div:first-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 20%;
-    width: 100%;
-  }
-
-  & div:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-
-    img {
-      width: 50%;
-      height: auto;
-    }
-  }
+  align-items: center;
+  padding: 0 20px;
 `
 
 export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 90%;
   width: 100%;
   background-color: white;
   border-radius: 42px 42px 0 0;
   padding: 40px 0;
 `
 
-export const Form = styled.div`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +53,7 @@ export const Input = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  height: 80px;
+  height: 100px;
   width: 100%;
   padding-bottom: 20px;
 
@@ -96,15 +74,15 @@ export const Input = styled.div`
     &:focus {
       outline: none;
     }
-
+    
     &[type='date'] {
       background-color: white;
-      width: 100%;
+      width: 50%;
     }
 
     &[type='time'] {
       background-color: white;
-      width: 100%;
+      width: 40%;
     }
   }
 `

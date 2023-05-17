@@ -71,25 +71,26 @@ app.get('/consulta/:id', async (req, res) => {
 
 app.put('/consulta/:id', async (req, res) => {
   const { id } = req.params;
-  const { nome, descricao, preco } = req.body;
+  const { medico, data, local, horario } = req.body;
 
   if (!id) return res.status(400).json({ success: false, message: 'Insira um id de um produto' });
 
   if (
-    !nome && 
-    !descricao &&
-    !preco
-  ) return res.status(400).json({ success: false, message: 'Insira um nome, descrição ou preço' });
+    !medico && 
+    !data &&
+    !local &&
+    !horario
+  ) return res.status(400).json({ success: false, message: 'Insira um campo' });
   
-  const prod = await Consultas.findByPk(id);
+  const consulta = await Consultas.findByPk(id);
   
-  if (!prod) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
+  if (!consulta) return res.status(404).json({ success: false, message: 'Consulta não encontrada' });
 
-  prod.update({ nome, descricao, preco });
+  consulta.update({ medico, data, local, horario });
 
-  await prod.save();
+  await consulta.save();
 
-  return res.json({ success: true, produto: prod });
+  return res.json({ success: true, consulta });
 });
 
 app.delete('/consulta/:id', async (req, res) => {

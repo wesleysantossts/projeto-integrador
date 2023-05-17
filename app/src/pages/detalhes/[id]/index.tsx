@@ -21,7 +21,6 @@ export default function Detalhes (){
     e.preventDefault();
     console.log('funcionou')
   }
-
   
   async function pegarConsultas() {
     const response = await api.get(`/consulta/${router.query.id}`);
@@ -43,7 +42,7 @@ export default function Detalhes (){
           <Link href={router.query?.from as string || '/'}>
             <FaArrowLeft size={25} color={'white'} /> 
           </Link>
-          <Link href={router.query?.from as string || '/'}>
+          <Link href={`/adicionar/${router.query.id}`}>
             <FaPen size={25} color={'white'} /> 
           </Link>
         </div>
@@ -57,19 +56,19 @@ export default function Detalhes (){
           <Form key={item.id}>
             <Input>
               <label htmlFor='nome'>Médico</label>
-              <input id='nome' type="text" value={item.medico} />
+              <input id='nome' type="text" value={item.medico} readOnly />
             </Input>
             <Input>
               <label htmlFor='data'>Dia</label>
-              <input id='data' type='date' value={item.data} />
+              <input id='data' type='date' value={item.data} readOnly />
             </Input>
             <Input>
               <label htmlFor='local'>Local</label>
-              <input id='local' type='text' value={item.local} />
+              <input id='local' type='text' value={item.local} readOnly />
             </Input>
             <Input>
               <label htmlFor='celular'>Horário</label>
-              <input id='celular' type="time" value={item.horario} />
+              <input id='celular' type="time" value={item.horario} readOnly />
             </Input>
           </Form>
           )
