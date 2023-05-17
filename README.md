@@ -13,8 +13,8 @@ Link do arquivo do vídeo:
 
 - Instale o mysql na sua máquina.
 - Crie um banco chamado "senac_consultas"
-- Instale as depêndencias do "app" e rode o comando "npm run dev".
-- Instale as depêndencias da "api" e rode o comando "npm start".
+- Instale as depêndencias do "app", entrando na pasta e rodando o comando "npm install" e depois rode o comando "npm run dev".
+- Instale as depêndencias da "api", entrando na pasta e rodando o comando "npm install" e depois e rode o comando "npm start".
 
 ## Páginas
 
