@@ -1,8 +1,8 @@
 # Agendamento de consultas
 
-Link do vídeo: https://youtu.be/lQ2PvWk3E24 
+Link do vídeo: https://youtu.be/lQ2PvWk3E24
 
-<div width="80%">
+<div width="50%">
   <video src="./app/public/assets/videos/lembrou.mp4" controls>
     Seu navegador não suporta a tag de vídeo.
   </video>
@@ -17,13 +17,13 @@ Link do vídeo: https://youtu.be/lQ2PvWk3E24
 
 ## Páginas
 
-Na página inicial o usuário vai visualizar todos os lembretes da semana podendo direcionar para as outras páginas, através dos ícones na parte inferior da tela 
+Na página inicial o usuário vai visualizar todos os lembretes da semana podendo direcionar para as outras páginas, através dos ícones na parte inferior da tela
 
 Na página de perfil o usuário vai preencher com os dados pessoas Nome, data de nascimento, celular e depois salvar.
 
 Já na página de criação/ edição do lembrete o usuário deverá preencher com o nome do médico, a data (dia, mês e ano), o local, e o horário e depois salvar.
 
-Na página de detalhes da consulta o usuário vai visualizar os dados salvos da consulta, podendo mudar os dados se necessário. 
+Na página de detalhes da consulta o usuário vai visualizar os dados salvos da consulta, podendo mudar os dados se necessário.
 
 ## Alunos
 
