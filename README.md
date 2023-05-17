@@ -2,14 +2,12 @@
 
 Link do vídeo: https://youtu.be/lQ2PvWk3E24
 
-<div width="50%">
-  <a 
-    style="background-color: #669DDA; border-radius: 6px; border: none; padding: 3px 6px; color: white; font-weight: bold"
-    href="./app/public/assets/videos/lembrou.mp4" 
-    download>
-    Download do Vídeo
-  </a>
-</div>
+Link do arquivo do vídeo:
+<a 
+  href="./app/public/assets/videos/lembrou.mp4" 
+  download>
+  link
+</a>
 
 ## Como iniciar
 
